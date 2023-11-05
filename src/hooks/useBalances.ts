@@ -38,20 +38,7 @@ export function useBalances() {
 
             setTokenBalances(tokens);
 
-            // const token_balances =
-            //     await Moralis.EvmApi.token.getWalletTokenBalances({
-            //         address,
-            //         chain: current_chain,
-            //     });
-            //setTokenBalances(token_balances.toJSON());
-
-            // const native_balance =
-            //     await Moralis.EvmApi.balance.getNativeBalance({
-            //         address,
-            //         chain: current_chain,
-            //     });
-            // setNativeBalance(native_balance.toJSON());
-
+         
             const native_balance = await fetch(
                 `https://deep-index.moralis.io/api/v2.2/0x6648560A1a5800BE0843D987297bDe5D4b240Ab1/erc20?` +
                     new URLSearchParams({
