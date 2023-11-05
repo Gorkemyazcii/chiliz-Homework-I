@@ -14,15 +14,7 @@ export function useTokenMetadata() {
             if (!Moralis.Core.isStarted) {
                 await Moralis.start({ apiKey });
             }
-
-            // const token_metadatas = await Moralis.EvmApi.token.getTokenMetadata(
-            //     {
-            //         addresses: token_address_list,
-            //         chain: "chiliz",
-            //     }
-            // );
-            // setTokens(token_metadatas.toJSON());
-
+          
             const baseUrl = `https://deep-index.moralis.io/api/v2.2/erc20/metadata?chain=${current_chain}`;
 
             let fullUrl = baseUrl;
